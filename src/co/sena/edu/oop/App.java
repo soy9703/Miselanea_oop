@@ -64,10 +64,9 @@ public class App {
                      System.out.println("2.Ingrese el segundo numero");
                      numero2 = src.nextDouble();
 
-                     System.out.println("El resultado de la suma es:" + (numero1 + numero2));
+                     System.out.println("El resultado de la suma es:" + data.suma(numero1, numero2));
 
-                 }
-                 ;
+                 };
                  break;
                  case 3: {
                      // Sub menu numero elevado al cuadrado
@@ -76,9 +75,8 @@ public class App {
                      System.out.println("Numero elevado al cuadrado");
                      System.out.println("Ingrese el número");
                      numero1 = src.nextDouble();
-                     System.out.println("El número elevado al cuadrado es:" + Math.pow(numero1, 2));
-                 }
-                 ;
+                     System.out.println("El número elevado al cuadrado es:" + data.elevadoCuadrado(numero1));
+                 };
                  break;
                  case 4: {
                      // Sub menu Conversion de Euro a D
@@ -88,8 +86,7 @@ public class App {
                      System.out.println("Ingrese el Valor");
                      numero1 = src.nextDouble();
                      System.out.println("El Valor convertido a Dolar es:" + (numero1 * 1.08));
-                 }
-                 ;
+                 };
                  break;
                  case 5: {
                      // Sub menu Area y Perimetro del Cuadrado
@@ -98,22 +95,48 @@ public class App {
                      System.out.println("Area y Perimetro del Cuadrado");
                      System.out.println("Ingrese el valor del lado");
                      lado = src.nextFloat();
-                     System.out.println("El área del cuadrado es:" + (lado * lado));
-                     System.out.println("El perímetro del cuadrado es:" + (4 * lado));
-                 }
-                 ;
+                     System.out.println("El área del cuadrado es:" + data.areaCuadrado (lado));
+                     System.out.println("El perímetro del cuadrado es:" + data.perimetroCuadrado(lado));
+                 };
                  break;
                  case 6: {
                      // Sub menu Area y Volumen de un Cilindro
 
                      System.out.println("--------------------");
                      System.out.println("Area y Volumen de un Cilindro");
+                     System.out.println("Ingrese el valor del radio");
+                     numero1 = src.nextDouble();
+                     System.out.println("Ingrese el valor de la altura");
+                     numero2 = src.nextDouble();
+                     System.out.println("El area del cilindro es:" + data.areaCilindro(numero1, numero2));
+                     System.out.println("El volumen del cilindro es:" + data.volumenCilindro(numero1, numero2));
+                 };
+                 break;
+                 case 7: {
+                     // Sub menu Algoritmo de una Circunferencia
+
+                     System.out.println("--------------------");
+                     System.out.println("Algoritmo de una Circunferencia");
                      System.out.println("Ingrese el valor del lado");
-                     lado = src.nextFloat();
-                     System.out.println("El área del cilindro es:" + (lado * lado));
-                     System.out.println("El volumen del cilindro es:" + (Math.PI * Math.pow(lado, 2)));
-                 }
-                 ;
+                     numero1 = src.nextDouble();
+                     System.out.println("La longitud de la circunferencia es:" + data.areaCirculo(numero1));
+                     System.out.println("El area de la circunferencia es:" + data.radioCirculo(numero1));
+                 };
+                 break;
+                 case 8: {
+                     // Sub menu Promedio de tres Numeros
+
+                     System.out.println("--------------------");
+                     System.out.println("Promedio de tres Numeros");
+                     System.out.println("Ingrese el primer número");
+                     numero1 = src.nextDouble();
+                     System.out.println("Ingrese el segundo número");
+                     numero2 = src.nextDouble();
+                     System.out.println("Ingrese el tercer número");
+                     numero3 = src.nextDouble();
+
+                     System.out.println("El promedio de los tres numeros es:" + ((numero1 + numero2 + numero3) / 3));
+                 };
                  break;
                  default: {
                      System.out.println("Opcion no valida");
@@ -124,6 +147,7 @@ public class App {
          case 2:{
 
              System.out.println("Categoria Condicionales");
+
          };
          break;
          case 3:{
